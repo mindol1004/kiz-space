@@ -1,0 +1,6 @@
+rootProject.name = 'sever'
+
+include 'config-server'
+include 'discovery-server'
+include 'gateway-server'
+
