@@ -1,0 +1,6 @@
+rootProject.name = 'service'
+
+include 'member-service:member-domain'
+include 'member-service:member-application'
+include 'member-service:member-api'
+include 'member-service:member-infrastructure'

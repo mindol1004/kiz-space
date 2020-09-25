@@ -1,0 +1,41 @@
+info:
+  component: Cloud Config Server
+
+server:
+  port: 8760
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://mindol.synology.me:3000/mindol1004/kids-space-cloud.git
+          search-paths: kids-config-repository
+          username: mindol1004
+          password: $awlswn1318a
+
+---
+spring:
+  profiles: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/server-config

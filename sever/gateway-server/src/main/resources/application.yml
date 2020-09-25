@@ -1,0 +1,42 @@
+info:
+  component: Cloud Gateway Server
+
+spring:
+  application:
+    name: gateway-server
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: WARN
+    com.kiz: DEBUG
+    reactor.netty.http.server.AccessLog: INFO
+
+---
+spring:
+  profiles: dev
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    kubernetes:
+      enabled: false
+    gateway:
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 1000ms
+      routes:
+        - id: member-service
+          uri: lb://members
+          predicates:
+            - Path=/members/**

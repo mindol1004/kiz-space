@@ -1,0 +1,33 @@
+info:
+  component: Cloud Member Service
+
+spring:
+  application:
+    name: member-serivce
+  profiles:
+    active: dev
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: WARN
+    com.kiz: DEBUG
+    reactor.netty.http.server.AccessLog: INFO
+
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: config-server
+        enabled: true

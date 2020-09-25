@@ -1,0 +1,10 @@
+bootJar.enabled = false
+jar.enabled = true
+
+dependencies {
+    implementation project(':member-service:member-domain')
+    implementation project(':member-service:member-infrastructure')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile group: 'org.modelmapper.extensions', name: 'modelmapper-spring', version: '2.2.0'
+}
