@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/service/member-service" />
+            <option value="$PROJECT_DIR$/service/member-service/member-api" />
+            <option value="$PROJECT_DIR$/service/member-service/member-application" />
+            <option value="$PROJECT_DIR$/service/member-service/member-domain" />
+            <option value="$PROJECT_DIR$/service/member-service/member-infrastructure" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/sever" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/sever" />
+            <option value="$PROJECT_DIR$/sever/config-server" />
+            <option value="$PROJECT_DIR$/sever/discovery-server" />
+            <option value="$PROJECT_DIR$/sever/gateway-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
